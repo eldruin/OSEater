@@ -31,7 +31,7 @@
  * \par
  * It's developed for the LPC2378-STK board from Olimex, based on the
  * LPC2378 microcontroller from NXP which has an ARM architecture.
- * The peripherals used are the built in screen, joystick and digital 
+ * The peripherals used are the built in screen, joystick and digital
  * to analog converter to play sounds.
  *
  * \par Design:
@@ -41,15 +41,15 @@
  * the code is not as beautiful as it could be.
  *
  * \par Website:
- * http://blog.japonesporlibre.com/oseater-arm
+ * http://blog.eldruin.com/oseater
  *
  * \author Diego Barrios Romero.
  * eldruin@gmail.com
  *
- * \par License:
+ * \par Copyright:
  * Copyright 2008, 2009 Diego Barrios Romero.
  *
- * \par
+ * \par License:
  * OSEater is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
