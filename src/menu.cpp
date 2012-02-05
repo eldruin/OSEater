@@ -27,7 +27,7 @@
  * along with OSEater.  If not, see <http://www.gnu.org/licenses/>.
  */
  
-#include "lcd.h"
+#include <olimex-lpc2378-stk/lcd.h>
 #include "menu.h"
 #include "controls.h"
 
@@ -43,13 +43,13 @@ static void off();
 void menu ()
 {
   unsigned char selected = 1;
-  LCD_rectangulo(0, 0, 132, 132, 1, BLACK);
-  LCD_imprimir_cadena("/// OSEater \\\\\\", 4, 4, FONT_GRANDE, WHITE,
+  LCD_rectangle(0, 0, 132, 132, 1, BLACK);
+  LCD_print_string("/// OSEater \\\\\\", 4, 4, BIG_FONT, WHITE,
   BLACK);
-  LCD_imprimir_cadena("Main Menu", 24, 28, FONT_GRANDE, WHITE, BLACK);
-  LCD_imprimir_cadena("Play", 48, 48, FONT_GRANDE, RED, BLACK);
-  LCD_imprimir_cadena("Credits", 68, 36, FONT_GRANDE, WHITE, BLACK);
-  LCD_imprimir_cadena("Help", 88, 48, FONT_GRANDE, WHITE, BLACK);
+  LCD_print_string("Main Menu", 24, 28, BIG_FONT, WHITE, BLACK);
+  LCD_print_string("Play", 48, 48, BIG_FONT, RED, BLACK);
+  LCD_print_string("Credits", 68, 36, BIG_FONT, WHITE, BLACK);
+  LCD_print_string("Help", 88, 48, BIG_FONT, WHITE, BLACK);
   while (1){
     unsigned int buttons = read_controls();
     if (buttons & BUTTON_CENTRAL){
@@ -59,39 +59,39 @@ void menu ()
       case 2:
         show_credits();
         selected = 1;
-        LCD_rectangulo(0, 0, 132, 132, 1, BLACK);
-        LCD_imprimir_cadena("/// OSEater \\\\\\", 4, 4, FONT_GRANDE, WHITE,
+        LCD_rectangle(0, 0, 132, 132, 1, BLACK);
+        LCD_print_string("/// OSEater \\\\\\", 4, 4, BIG_FONT, WHITE,
                             BLACK);
-        LCD_imprimir_cadena("Main Menu", 24, 28, FONT_GRANDE, WHITE, BLACK);
-        LCD_imprimir_cadena("Play", 48, 48, FONT_GRANDE, RED, BLACK);
-        LCD_imprimir_cadena("Credits", 68, 36, FONT_GRANDE, WHITE, BLACK);
-        LCD_imprimir_cadena("Help", 88, 48, FONT_GRANDE, WHITE, BLACK);
+        LCD_print_string("Main Menu", 24, 28, BIG_FONT, WHITE, BLACK);
+        LCD_print_string("Play", 48, 48, BIG_FONT, RED, BLACK);
+        LCD_print_string("Credits", 68, 36, BIG_FONT, WHITE, BLACK);
+        LCD_print_string("Help", 88, 48, BIG_FONT, WHITE, BLACK);
         break;
       case 3:
         show_help();
         selected = 1;
-        LCD_rectangulo(0, 0, 132, 132, 1, BLACK);
-        LCD_imprimir_cadena("/// OSEater \\\\\\", 4, 4, FONT_GRANDE, WHITE,
+        LCD_rectangle(0, 0, 132, 132, 1, BLACK);
+        LCD_print_string("/// OSEater \\\\\\", 4, 4, BIG_FONT, WHITE,
                             BLACK);
-        LCD_imprimir_cadena("Main Menu", 24, 28, FONT_GRANDE, WHITE, BLACK);
-        LCD_imprimir_cadena("Play", 48, 48, FONT_GRANDE, RED, BLACK);
-        LCD_imprimir_cadena("Credits", 68, 36, FONT_GRANDE, WHITE, BLACK);
-        LCD_imprimir_cadena("Help", 88, 48, FONT_GRANDE, WHITE, BLACK);
+        LCD_print_string("Main Menu", 24, 28, BIG_FONT, WHITE, BLACK);
+        LCD_print_string("Play", 48, 48, BIG_FONT, RED, BLACK);
+        LCD_print_string("Credits", 68, 36, BIG_FONT, WHITE, BLACK);
+        LCD_print_string("Help", 88, 48, BIG_FONT, WHITE, BLACK);
         break;
       }
     }
     if (buttons & BUTTON_DOWN){
       switch(selected){
       case 1:
-        LCD_imprimir_cadena("Play", 48, 48, FONT_GRANDE, WHITE,
+        LCD_print_string("Play", 48, 48, BIG_FONT, WHITE,
                             BLACK);
-        LCD_imprimir_cadena("Credits", 68, 36, FONT_GRANDE, RED,
+        LCD_print_string("Credits", 68, 36, BIG_FONT, RED,
                             BLACK);
         break;
       case 2:
-        LCD_imprimir_cadena("Credits", 68, 36, FONT_GRANDE, WHITE,
+        LCD_print_string("Credits", 68, 36, BIG_FONT, WHITE,
                             BLACK);
-        LCD_imprimir_cadena("Help", 88, 48, FONT_GRANDE, RED,
+        LCD_print_string("Help", 88, 48, BIG_FONT, RED,
                             BLACK);
         break;
       default:
@@ -102,15 +102,15 @@ void menu ()
     else if (buttons & BUTTON_UP){
       switch(selected){
       case 2:
-        LCD_imprimir_cadena("Play", 48, 48, FONT_GRANDE, RED,
+        LCD_print_string("Play", 48, 48, BIG_FONT, RED,
                             BLACK);
-        LCD_imprimir_cadena("Credits", 68, 36, FONT_GRANDE, WHITE,
+        LCD_print_string("Credits", 68, 36, BIG_FONT, WHITE,
                             BLACK);
         break;
       case 3:
-        LCD_imprimir_cadena("Credits", 68, 36, FONT_GRANDE, RED,
+        LCD_print_string("Credits", 68, 36, BIG_FONT, RED,
                             BLACK);
-        LCD_imprimir_cadena("Help", 88, 48, FONT_GRANDE, WHITE,
+        LCD_print_string("Help", 88, 48, BIG_FONT, WHITE,
                             BLACK);
         break;
       default:
@@ -118,20 +118,20 @@ void menu ()
       }
       selected--;
     }
-    retardo(300000);
+    delay(300000);
   }
 }
 
 
 void menu_freedom_wins ()
 {unsigned char selected = 1;
-  LCD_rectangulo(0, 0, 132, 132, 1, BLACK);
-  LCD_imprimir_cadena("/// OSEater \\\\\\", 4, 4, FONT_GRANDE, WHITE,
+  LCD_rectangle(0, 0, 132, 132, 1, BLACK);
+  LCD_print_string("/// OSEater \\\\\\", 4, 4, BIG_FONT, WHITE,
                       BLACK);
-  LCD_imprimir_cadena("Freedom Wins!", 24, 14, FONT_GRANDE, WHITE, BLACK);
-  LCD_imprimir_cadena("Play again", 48, 26, FONT_MEDIANO, RED, BLACK);
-  LCD_imprimir_cadena("Yes", 68, 57, FONT_PEQUENO, RED, BLACK);
-  LCD_imprimir_cadena("No", 88, 60, FONT_PEQUENO, WHITE, BLACK);
+  LCD_print_string("Freedom Wins!", 24, 14, BIG_FONT, WHITE, BLACK);
+  LCD_print_string("Play again", 48, 26, MEDIUM_FONT, RED, BLACK);
+  LCD_print_string("Yes", 68, 57, SMALL_FONT, RED, BLACK);
+  LCD_print_string("No", 88, 60, SMALL_FONT, WHITE, BLACK);
   while (1){
     unsigned int buttons = read_controls();
     if (buttons & BUTTON_CENTRAL){
@@ -145,15 +145,15 @@ void menu_freedom_wins ()
     }
     if (buttons & BUTTON_DOWN){
       if (selected == 1){
-        LCD_imprimir_cadena("Yes", 68, 57, FONT_PEQUENO, WHITE, BLACK);
-        LCD_imprimir_cadena("No", 88, 60, FONT_PEQUENO, RED, BLACK);
+        LCD_print_string("Yes", 68, 57, SMALL_FONT, WHITE, BLACK);
+        LCD_print_string("No", 88, 60, SMALL_FONT, RED, BLACK);
         selected++;
       }
     }
     else if (buttons & BUTTON_UP){
       if (selected == 2){
-        LCD_imprimir_cadena("Yes", 68, 57, FONT_PEQUENO, RED, BLACK);
-        LCD_imprimir_cadena("No", 88, 60, FONT_PEQUENO, WHITE, BLACK);
+        LCD_print_string("Yes", 68, 57, SMALL_FONT, RED, BLACK);
+        LCD_print_string("No", 88, 60, SMALL_FONT, WHITE, BLACK);
         selected--;
       }
     }
@@ -163,13 +163,13 @@ void menu_freedom_wins ()
 void menu_game_over()
 {
   unsigned char selected = 1;
-  LCD_rectangulo(0, 0, 132, 132, 1, BLACK);
-  LCD_imprimir_cadena("/// OSEater \\\\\\", 4, 4, FONT_GRANDE, WHITE,
+  LCD_rectangle(0, 0, 132, 132, 1, BLACK);
+  LCD_print_string("/// OSEater \\\\\\", 4, 4, BIG_FONT, WHITE,
                       BLACK);
-  LCD_imprimir_cadena("Game over", 24, 30, FONT_GRANDE, WHITE, BLACK);
-  LCD_imprimir_cadena("Play again", 48, 26, FONT_MEDIANO, RED, BLACK);
-  LCD_imprimir_cadena("Yes", 68, 57, FONT_PEQUENO, RED, BLACK);
-  LCD_imprimir_cadena("No", 88, 60, FONT_PEQUENO, WHITE, BLACK);
+  LCD_print_string("Game over", 24, 30, BIG_FONT, WHITE, BLACK);
+  LCD_print_string("Play again", 48, 26, MEDIUM_FONT, RED, BLACK);
+  LCD_print_string("Yes", 68, 57, SMALL_FONT, RED, BLACK);
+  LCD_print_string("No", 88, 60, SMALL_FONT, WHITE, BLACK);
   while (1){
     unsigned int buttons = read_controls();
     if (buttons & BUTTON_CENTRAL){
@@ -183,15 +183,15 @@ void menu_game_over()
     }
     if (buttons & BUTTON_DOWN){
       if (selected == 1){
-        LCD_imprimir_cadena("Yes", 68, 57, FONT_PEQUENO, WHITE, BLACK);
-        LCD_imprimir_cadena("No", 88, 60, FONT_PEQUENO, RED, BLACK);
+        LCD_print_string("Yes", 68, 57, SMALL_FONT, WHITE, BLACK);
+        LCD_print_string("No", 88, 60, SMALL_FONT, RED, BLACK);
         selected++;
       }
     }
     else if (buttons & BUTTON_UP){
       if (selected == 2){
-        LCD_imprimir_cadena("Yes", 68, 57, FONT_PEQUENO, RED, BLACK);
-        LCD_imprimir_cadena("No", 88, 60, FONT_PEQUENO, WHITE, BLACK);
+        LCD_print_string("Yes", 68, 57, SMALL_FONT, RED, BLACK);
+        LCD_print_string("No", 88, 60, SMALL_FONT, WHITE, BLACK);
         selected--;
       }
     }
@@ -201,41 +201,41 @@ void menu_game_over()
 
 void show_credits()
 {
-  LCD_rectangulo(0, 0, 132, 132, 1, BLACK);
-  LCD_imprimir_cadena("/// OSEater \\\\", 4, 4, FONT_GRANDE, WHITE,
+  LCD_rectangle(0, 0, 132, 132, 1, BLACK);
+  LCD_print_string("/// OSEater \\\\", 4, 4, BIG_FONT, WHITE,
                       BLACK);
-  LCD_imprimir_cadena("Credits", 24, 36, FONT_GRANDE, WHITE, BLACK);
-  LCD_imprimir_cadena("A game by", 44, 8, FONT_MEDIANO, WHITE, BLACK);
-  LCD_imprimir_cadena("Diego Barrios", 56, 8, FONT_MEDIANO, WHITE,
+  LCD_print_string("Credits", 24, 36, BIG_FONT, WHITE, BLACK);
+  LCD_print_string("A game by", 44, 8, MEDIUM_FONT, WHITE, BLACK);
+  LCD_print_string("Diego Barrios", 56, 8, MEDIUM_FONT, WHITE,
                       BLACK);
-  LCD_imprimir_cadena("Romero.", 68, 8, FONT_MEDIANO, WHITE, BLACK);
-  LCD_imprimir_cadena("Developed for", 80, 8, FONT_PEQUENO, WHITE,
+  LCD_print_string("Romero.", 68, 8, MEDIUM_FONT, WHITE, BLACK);
+  LCD_print_string("Developed for", 80, 8, SMALL_FONT, WHITE,
                       BLACK);
-  LCD_imprimir_cadena("Microprocessors", 90, 8, FONT_PEQUENO, WHITE,
+  LCD_print_string("Microprocessors", 90, 8, SMALL_FONT, WHITE,
                       BLACK);
-  LCD_imprimir_cadena("& Micro-", 100, 8, FONT_PEQUENO, WHITE, BLACK);
-  LCD_imprimir_cadena("controllers", 110, 8, FONT_PEQUENO, WHITE,
+  LCD_print_string("& Micro-", 100, 8, SMALL_FONT, WHITE, BLACK);
+  LCD_print_string("controllers", 110, 8, SMALL_FONT, WHITE,
                       BLACK);
-  LCD_imprimir_cadena("subject.", 120, 8, FONT_PEQUENO, WHITE, BLACK);
+  LCD_print_string("subject.", 120, 8, SMALL_FONT, WHITE, BLACK);
   while(!read_controls());
 }
 
 void show_help()
 {
-  LCD_rectangulo(0, 0, 132, 132, 1, BLACK);
-  LCD_imprimir_cadena("/// OSEater \\\\", 4, 4, FONT_GRANDE, WHITE,
+  LCD_rectangle(0, 0, 132, 132, 1, BLACK);
+  LCD_print_string("/// OSEater \\\\", 4, 4, BIG_FONT, WHITE,
                       BLACK);
-  LCD_imprimir_cadena("Help", 24, 48, FONT_GRANDE, WHITE, BLACK);
-  LCD_imprimir_cadena("Just move the", 44, 8, FONT_GRANDE, WHITE, BLACK);
-  LCD_imprimir_cadena("joystick", 64, 8, FONT_GRANDE, WHITE, BLACK);
-  LCD_imprimir_cadena("to move around", 84, 8, FONT_GRANDE, WHITE,
+  LCD_print_string("Help", 24, 48, BIG_FONT, WHITE, BLACK);
+  LCD_print_string("Just move the", 44, 8, BIG_FONT, WHITE, BLACK);
+  LCD_print_string("joystick", 64, 8, BIG_FONT, WHITE, BLACK);
+  LCD_print_string("to move around", 84, 8, BIG_FONT, WHITE,
                       BLACK);
   while(!read_controls());
 }
 
 void off()
 {
-  LCD_rectangulo(0, 0, 132, 132, 1, BLACK);
-  LCD_apagar_backlight();
+  LCD_rectangle(0, 0, 132, 132, 1, BLACK);
+  LCD_turn_off_backlight();
   while(1);
 }

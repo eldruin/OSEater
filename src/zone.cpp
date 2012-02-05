@@ -19,12 +19,12 @@
  * along with OSEater.  If not, see <http://www.gnu.org/licenses/>.
  */
  
-#include "lcd.h"
+#include <olimex-lpc2378-stk/lcd.h>
 #include "general.h"
 #include "zone.h"
 
 void Zone::draw_pool(unsigned char number) const
 {
-  LCD_imprimir_caracter(number + '0', (pool[0]+1) * TILESIZE + TILESIZE/2,
-			pool[1] * TILESIZE + TILESIZE/2-3, FONT_MEDIANO, RED, 0x444);
+  LCD_print_character(number + '0', (pool[0]+1) * TILESIZE + TILESIZE/2,
+			pool[1] * TILESIZE + TILESIZE/2-3, MEDIUM_FONT, RED, 0x444);
 }

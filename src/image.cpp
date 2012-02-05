@@ -21,7 +21,7 @@
  
 #include <cassert>
 #include <cctype> // For isspace()
-#include "lcd.h"
+#include <olimex-lpc2378-stk/lcd.h>
 #include "image.h"
 
 /// Assert fail function.
@@ -34,7 +34,7 @@ unsigned int Image::pixel (unsigned int x, unsigned int y) const
   if (x < width && y < height){
     x *= 3;
     y *= 3;
-    return COLOR_RGB((_data[y*width+x])>>4,
+    return RGB_COLOR((_data[y*width+x])>>4,
       (_data[y*width+x+1])>>4, (_data[y*width+x+2])>>4);
   }
   return 0;

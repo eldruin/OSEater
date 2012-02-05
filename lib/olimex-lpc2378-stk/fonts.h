@@ -1,25 +1,29 @@
+/// \file fonts.h Fonts data
+
 /* Copyright 2008 Victor Manuel Sánchez Corbacho.
+ * Copyright 2012 Diego Barrios Romero.
  *
  * This file is part of the Olimex-LPC2378-STK library.
  *
- * Olimex-LPC2378-STK library is free software: you can redistribute it 
- * and/or modify it under the terms of the GNU General Public License as 
- * published by the Free Software Foundation, either version 3 of the 
+ * Olimex-LPC2378-STK library is free software: you can redistribute it
+ * and/or modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
  *
- * Olimex-LPC2378-STK library is distributed in the hope that it will 
- * be useful, but WITHOUT ANY WARRANTY; without even the implied 
+ * Olimex-LPC2378-STK library is distributed in the hope that it will
+ * be useful, but WITHOUT ANY WARRANTY; without even the implied
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Olimex-LPC2378-STK library.  If not, see 
+ * along with Olimex-LPC2378-STK library.  If not, see
  * <http://www.gnu.org/licenses/>.
  */
 
 #ifndef __FONTS_H__
 #define __FONTS_H__
 
+/// Small font glyphs (6x8 pixels) \sa SMALL_FONT
 const unsigned char FONT6x8[97][8] = {
 0x06,0x08,0x08,0x00,0x00,0x00,0x00,0x00, // columns, rows, num_bytes_per_char
 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00, // space 0x20
@@ -119,6 +123,7 @@ const unsigned char FONT6x8[97][8] = {
 0x40,0xA8,0x10,0x00,0x00,0x00,0x00,0x00, // ~
 0x70,0xD8,0xD8,0x70,0x00,0x00,0x00,0x00 }; // DEL
 
+/// Medium font glyphs (8x8 pixels) \sa MEDIUM_FONT
 const unsigned char FONT8x8[97][8] = {
 0x08,0x08,0x08,0x00,0x00,0x00,0x00,0x00, // columns, rows, num_bytes_per_char
 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00, // space 0x20
@@ -218,6 +223,7 @@ const unsigned char FONT8x8[97][8] = {
 0x3B,0x6E,0x00,0x00,0x00,0x00,0x00,0x00, // ~
 0x1C,0x36,0x36,0x1C,0x00,0x00,0x00,0x00 }; // DEL
 
+/// Big font glyphs (8x16 pixels) \sa BIG_FONT
 const unsigned char FONT8x16[97][16] = {
 0x08,0x10,0x10,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00, // columns, rows, num_bytes_per_char
 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00, // space 0x20

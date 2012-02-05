@@ -21,7 +21,7 @@
  */
  
 #include <targets/LPC2378.h>
-#include "lcd.h"
+#include <olimex-lpc2378-stk/lcd.h>
 #include "tile.h"
 #include "image.h"
 #include "herocharacter.h"
@@ -29,14 +29,14 @@
 
 void scoreboard_update (HeroCharacter& c)
 {
-  LCD_imprimir_cadena("Score:", 106, 15, FONT_PEQUENO, WHITE, BLACK);
-  LCD_imprimir_caracter(c.points()/100 + '0', 116, 24, FONT_PEQUENO,
+  LCD_print_string("Score:", 106, 15, SMALL_FONT, WHITE, BLACK);
+  LCD_print_character(c.points()/100 + '0', 116, 24, SMALL_FONT,
                         WHITE, BLACK);
-  LCD_imprimir_caracter(c.points()%100/10 + '0', 116, 30, FONT_PEQUENO,
+  LCD_print_character(c.points()%100/10 + '0', 116, 30, SMALL_FONT,
                         WHITE, BLACK);
-  LCD_imprimir_caracter(c.points()%10 + '0', 116, 36, FONT_PEQUENO,
+  LCD_print_character(c.points()%10 + '0', 116, 36, SMALL_FONT,
                         WHITE, BLACK);
-  LCD_imprimir_cadena("Lifes:", 106, 81, FONT_PEQUENO, WHITE, BLACK);
-  LCD_imprimir_caracter(c.lifes() + '0', 116, 96, FONT_PEQUENO, WHITE, BLACK);
+  LCD_print_string("Lifes:", 106, 81, SMALL_FONT, WHITE, BLACK);
+  LCD_print_character(c.lifes() + '0', 116, 96, SMALL_FONT, WHITE, BLACK);
 }
 

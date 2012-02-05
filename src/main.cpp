@@ -52,9 +52,6 @@
 
 using namespace std;
 
-/// Initialization of the microcontroller.
-void Inicializar_LPC2378(void);
-
 GameMode Game_mode; ///< Mode of the game
 unsigned int Game_mode_counter = 0; ///< Down counter for the Game_mode.
 
@@ -65,10 +62,10 @@ unsigned int _objects_count; ///< Attribute of ObjectList. Moved for bugfixing.
 /// Main function of the game. Manages it all.
 int main (void)
 {
-  Inicializar_LPC2378();
-  inicializar_reproduccion_sonido();
-  LCD_inicializar();
-  LCD_borrar();
+  initialize_LPC2378();
+  initialize_sound_playback();
+  initialize_LCD();
+  LCD_clear();
 
   Zone zone2;
 
@@ -132,7 +129,7 @@ int main (void)
     Character::Type winner;
     // Menu
     menu();
-    LCD_rectangulo(0, 0, 132, 132, 1, BLACK);
+    LCD_rectangle(0, 0, 132, 132, 1, BLACK);
     zone.image->draw(BOARD_OFFSET_Y, BOARD_OFFSET_X);
     scoreboard_update (hero);
     // Draw all the objects
@@ -252,34 +249,34 @@ int main (void)
       // Update the Game mode
       if (Game_mode_counter){
         if(--Game_mode_counter){
-          LCD_imprimir_caracter('E', 2, 5, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('A', 10, 6, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('T', 18, 6, FONT_MEDIANO, RED, BLACK);
+          LCD_print_character('E', 2, 5, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('A', 10, 6, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('T', 18, 6, MEDIUM_FONT, RED, BLACK);
         
-          LCD_imprimir_caracter('T', 34, 6, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('H', 42, 6, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('E', 50, 5, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('M', 58, 5, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('!', 66, 7, FONT_MEDIANO, RED, BLACK);
+          LCD_print_character('T', 34, 6, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('H', 42, 6, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('E', 50, 5, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('M', 58, 5, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('!', 66, 7, MEDIUM_FONT, RED, BLACK);
 
-          LCD_imprimir_caracter('E', 2, 120, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('A', 10, 121, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('T', 18, 121, FONT_MEDIANO, RED, BLACK);
+          LCD_print_character('E', 2, 120, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('A', 10, 121, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('T', 18, 121, MEDIUM_FONT, RED, BLACK);
           
-          LCD_imprimir_caracter('T', 34, 120, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('H', 42, 121, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('E', 50, 120, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('M', 58, 121, FONT_MEDIANO, RED, BLACK);
-          LCD_imprimir_caracter('!', 66, 123, FONT_MEDIANO, RED, BLACK);
+          LCD_print_character('T', 34, 120, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('H', 42, 121, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('E', 50, 120, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('M', 58, 121, MEDIUM_FONT, RED, BLACK);
+          LCD_print_character('!', 66, 123, MEDIUM_FONT, RED, BLACK);
         }
         else{
           Game_mode = MODE_DIE;
-          LCD_rectangulo(2, 5, 74, 13, 1, BLACK);
-          LCD_rectangulo(2, 120, 74, 128, 1, BLACK);
+          LCD_rectangle(2, 5, 74, 13, 1, BLACK);
+          LCD_rectangle(2, 120, 74, 128, 1, BLACK);
         }
       }
 
-      retardo(300000);
+      delay(300000);
     }
     // Show results
     if (winner == Character::BAD)

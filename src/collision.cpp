@@ -42,10 +42,10 @@ bool collision (HeroCharacter& c, ObjectList ol, bool& hero_win)
   if ( (obj = ol.get(c.position())) ){
     if (obj->extra_life()){
       c.lifes()++;
-      reproducir_sonido (life_ogg, life_ogg_size);
+      play_sound (life_ogg, life_ogg_size);
     }
     else
-      reproducir_sonido (point_ogg, point_ogg_size);
+      play_sound (point_ogg, point_ogg_size);
     c.points() += obj->points();
     if (obj->type() == Object::SPECIAL){
       Game_mode = MODE_EAT;
@@ -73,7 +73,7 @@ bool collision (HeroCharacter& a, BadCharacter& b,
       b.die(zone);
       a.points() += 20;
     }
-    reproducir_sonido (die_ogg, die_ogg_size);
+    play_sound (die_ogg, die_ogg_size);
     return true;
   }
   return false;
