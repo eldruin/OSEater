@@ -43,22 +43,22 @@
  </TraceWindow>
  <Watch1>
   <Watches active="1" update="Never" >
-   <Watchpoint linenumber="54" radix="16" name="r" expression="r" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
-   <Watchpoint evalMode="0" linenumber="16" evalType="1" radix="-1" name="_data" expression="this->_data" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
-   <Watchpoint linenumber="20" radix="16" name="c" expression="c" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
-   <Watchpoint linenumber="43" radix="-1" name="colors" expression="this->colors" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
-   <Watchpoint linenumber="88" radix="-1" name="height" expression="this->height" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
-   <Watchpoint linenumber="0" radix="10" name="cpp" expression="this->cpp" filename="" />
    <Watchpoint linenumber="46" radix="16" name="rep" expression="rep" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
-   <Watchpoint evalMode="0" linenumber="151" evalType="2" radix="-1" name="from" expression="(*from)" filename="/home/eldruin/ARM/s3c2440/OSEater CW/floormap.cpp" />
-   <Watchpoint evalMode="0" linenumber="152" evalType="2" radix="-1" name="next" expression="(*next)" filename="/home/eldruin/ARM/s3c2440/OSEater CW/floormap.cpp" />
-   <Watchpoint linenumber="19" radix="16" name="_data[0][ptr++]" expression="_data[0][ptr++]" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
-   <Watchpoint evalMode="1" linenumber="152" evalType="2" radix="-1" name="t" expression="t" filename="/home/eldruin/ARM/s3c2440/OSEater CW/floormap.cpp" />
-   <Watchpoint linenumber="0" radix="16" name="cpp" expression="cpp" filename="" />
-   <Watchpoint evalMode="0" linenumber="20" evalType="2" radix="-1" name="c" expression="(*c)" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
-   <Watchpoint linenumber="21" radix="10" name="width" expression="this->width" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
    <Watchpoint linenumber="40" radix="-1" name="_objects_count" expression="this->_objects_count" filename="/home/eldruin/ARM/s3c2440/OSEater CW/objectlist.cpp" />
+   <Watchpoint evalMode="0" linenumber="16" evalType="1" radix="-1" name="_data" expression="this->_data" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
+   <Watchpoint evalMode="0" linenumber="20" evalType="2" radix="-1" name="c" expression="(*c)" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
+   <Watchpoint linenumber="0" radix="16" name="cpp" expression="cpp" filename="" />
+   <Watchpoint evalMode="1" linenumber="152" evalType="2" radix="-1" name="t" expression="t" filename="/home/eldruin/ARM/s3c2440/OSEater CW/floormap.cpp" />
+   <Watchpoint linenumber="19" radix="16" name="_data[0][ptr++]" expression="_data[0][ptr++]" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
+   <Watchpoint evalMode="0" linenumber="152" evalType="2" radix="-1" name="next" expression="(*next)" filename="/home/eldruin/ARM/s3c2440/OSEater CW/floormap.cpp" />
+   <Watchpoint evalMode="0" linenumber="151" evalType="2" radix="-1" name="from" expression="(*from)" filename="/home/eldruin/ARM/s3c2440/OSEater CW/floormap.cpp" />
    <Watchpoint linenumber="46" radix="16" name="rep" expression="rep" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
+   <Watchpoint linenumber="0" radix="10" name="cpp" expression="this->cpp" filename="" />
+   <Watchpoint linenumber="88" radix="-1" name="height" expression="this->height" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
+   <Watchpoint linenumber="43" radix="-1" name="colors" expression="this->colors" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
+   <Watchpoint linenumber="20" radix="16" name="c" expression="c" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
+   <Watchpoint linenumber="21" radix="10" name="width" expression="this->width" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
+   <Watchpoint linenumber="54" radix="16" name="r" expression="r" filename="/home/eldruin/ARM/s3c2440/OSEater CW/image.cpp" />
   </Watches>
  </Watch1>
  <Watch2>
@@ -71,7 +71,14 @@
   <Watches active="0" update="Never" />
  </Watch4>
  <Files>
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="/home/eldruin/projects/OSEater/src/collision.cpp" y="30" path="/home/eldruin/projects/OSEater/src/collision.cpp" left="0" selected="1" name="unnamed" top="25" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="14" debugPath="/home/eldruin/projects/OSEater/src/collision.cpp" y="75" path="/home/eldruin/projects/OSEater/src/collision.cpp" left="0" selected="0" name="unnamed" top="70" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="/home/eldruin/projects/OSEater/src/main.cpp" y="21" path="/home/eldruin/projects/OSEater/src/main.cpp" left="0" selected="0" name="unnamed" top="17" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="/home/eldruin/projects/OSEater/lib/olimex-lpc2378-stk/init.cpp" y="23" path="/home/eldruin/projects/OSEater/lib/olimex-lpc2378-stk/init.cpp" left="0" selected="0" name="unnamed" top="19" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="20" debugPath="/home/eldruin/projects/OSEater/src/image.cpp" y="36" path="/home/eldruin/projects/OSEater/src/image.cpp" left="0" selected="0" name="unnamed" top="32" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="49" debugPath="/home/eldruin/projects/OSEater/src/zone.cpp" y="28" path="/home/eldruin/projects/OSEater/src/zone.cpp" left="0" selected="0" name="unnamed" top="19" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="/home/eldruin/projects/OSEater/lib/olimex-lpc2378-stk/sound.cpp" y="0" path="/home/eldruin/projects/OSEater/lib/olimex-lpc2378-stk/sound.cpp" left="0" selected="0" name="unnamed" top="27" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="58" debugPath="/home/eldruin/projects/OSEater/src/scoreboard.cpp" y="39" path="/home/eldruin/projects/OSEater/src/scoreboard.cpp" left="0" selected="0" name="unnamed" top="30" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="3" debugPath="/home/eldruin/projects/OSEater/src/menu.cpp" y="0" path="/home/eldruin/projects/OSEater/src/menu.cpp" left="0" selected="1" name="unnamed" top="0" />
  </Files>
  <ARMCrossStudioWindow activeProject="OSEater" autoConnectTarget="/Olimex ARM-USB-TINY" debugSearchFileMap="" fileDialogInitialDirectory="/home/eldruin/projects/OSEater/lib/olimex-lpc2378-stk" fileDialogDefaultFilter="*.c;*.cpp;*.cxx;*.cc;*.h;*.hpp;*.hxx" autoConnectCapabilities="1407" debugSearchPath="" buildConfiguration="ARM Flash Debug" />
 </session>
